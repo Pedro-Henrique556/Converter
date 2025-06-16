@@ -1,0 +1,176 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #8B51FD; /* Lilás claro */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo no topo */
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Área de moedas */
+.moedas {
+  background-color: antiquewhite;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 20px;
+}
+
+.moeda {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.moeda img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.moeda p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.moeda:hover {
+  transform: translateY(-5px);
+}
+
+.moeda:hover img {
+  transform: scale(1.05);
+}
+
+/* Seta */
+.ceta-container {
+  margin: 40px 0;
+}
+
+.ceta {
+  width: 60px;
+  animation: bounce 2s infinite;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  margin-bottom: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+   align-items: flex-start;
+}
+
+footer input {
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  
+}
+.formulario {
+  display: flex;
+  margin-right: 200px;
+  align-items: center;  /* Controla o alinhamento vertical (top, middle, bottom, center) */
+  gap: 20px;  /* Espaço entre o botão e os valores */
+  margin-left: 130px;
+  margin-bottom: 40px;
+}
+
+.valores {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  margin-top: -50px;
+  
+  background-color: beige;
+  border-radius: 30px;
+  width: 360px;
+  height: 130px;
+}
+
+footer p {
+  margin: auto;
+  font-size: 16px;
+  margin-top: 4px;
+  
+}
+
+.texto1, .texto2 {
+  font-weight: bold;
+}
+
+footer button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #A362FF, #7F4EF5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+footer button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação da seta */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .moeda img {
+    width: 70px;
+  }
+
+  .moeda p {
+    font-size: 14px;
+  }
+
+  .ceta {
+    width: 45px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer input {
+    width: 80%;
+  }
+
+  footer button {
+    width: 80%;
+  }
+}
