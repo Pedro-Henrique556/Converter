@@ -105,3 +105,13 @@ document.querySelector('button').addEventListener('click', function() {
     maximumFractionDigits: 2
   });
 });
+function apertarBotao() {
+  const botao = document.querySelector('button')
+  document.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter'){
+    botao.click();
+  }
+
+  })};
+  apertarBotao()
+
